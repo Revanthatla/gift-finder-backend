@@ -7,7 +7,7 @@ from groq import Groq
 app = Flask(__name__)
 CORS(app, origins="*")
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 
 
